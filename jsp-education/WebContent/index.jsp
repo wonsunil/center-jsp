@@ -18,7 +18,9 @@
 		switch(section) {
 		case "insert" : %> <%@include file="page/insert.jsp" %> <%
 				break;
-		case "insert_data" : %> <%@include file="action/insert_data.jsp" %> <%
+		case "insert_sales" : %> <%@include file="page/insert_sales.jsp" %> <%
+				break;
+		case "insert_shop" : %> <%@include file="page/insert_shop.jsp" %> <%
 				break;
 		case "select" : %> <%@include file="page/select.jsp" %> <%
 				break;
