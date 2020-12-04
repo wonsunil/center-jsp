@@ -3,6 +3,7 @@
 html, body {
 	width: 100%;
 	height: 100vh;
+	color: black;
 }
 
 header {
@@ -56,4 +57,5 @@ section {
 
 table {
 	margin: 0 auto;
+	color: #000;
 }
