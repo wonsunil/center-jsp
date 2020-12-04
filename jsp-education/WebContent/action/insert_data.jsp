@@ -11,17 +11,20 @@
 	try {
 		Class.forName("oracle.jdbc.OracleDriver");
 		Connection conn = DriverManager.getConnection
-			("jdbc:oracle:thin:@//122.128.169.32:1521/xe", "sdh_6", "1234");
+			("jdbc:oracle:thin:@//122.128.169.32:1521/xe", "sdh_14", "1234");
 
 		Statement stmt = conn.createStatement();
 		
 		String query = "INSERT INTO TBL_PIZZA_01 (PCODE, PNAME, COST) VALUES('%s', '%s', '%d')"; 
-		
 		ResultSet rs = stmt.executeQuery(String.format(query, pizza_code, pizza_name, cost));
-
+		
+		conn.commit();
+		
 		stmt.close();
 		conn.close();
 	} catch (Exception e) {
 		e.printStackTrace();
 	};
+	
+	response.sendRedirect("../index.jsp");
 %>
